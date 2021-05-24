@@ -34,7 +34,7 @@ class TempMail(object):
             url = 'https://{0}/request/domains/format/json/'.format(
                 self.api_domain)
             req = requests.get(url, headers={
-                'x-rapidapi-host': self.domain,
+                'x-rapidapi-host': self.api_domain,
                 'x-rapidapi-key': self.api_key
             })
             domains = req.json()
