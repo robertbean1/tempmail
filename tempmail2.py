@@ -80,7 +80,7 @@ class TempMail(object):
 
         :param email: email address for generate md5 hash.
         """
-        return md5(email.encode('utf-8')).hexdigest()
+        return md5(str(email).encode("utf-8")).hexdigest()
 
     def get_mailbox(self, email=None, email_hash=None):
         """
